@@ -1,0 +1,29 @@
+<app-header></app-header>
+
+<div>
+    <div class="col-8" style="text-align: center;">
+        <p-table styleClass="p-datatable-gridlines" [value]="jugadores"  responsiveLayout="scroll">
+            <ng-template pTemplate="caption" >
+                Resumen
+            </ng-template>
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>Jugador</th>
+                    <th>Rondas Ganadas</th>
+                    <th>Sala</th>
+                    
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-jugador>
+                <tr>
+                    <td>{{jugador.jugadorId}}</td>
+                    <td>{{jugador.puntaje}}</td>
+                    <td>{{jugador.alias}}</td>
+                    
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="summary">
+            </ng-template>
+        </p-table>
+    </div>
+</div>
